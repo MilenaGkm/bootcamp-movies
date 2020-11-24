@@ -15,6 +15,9 @@ body{
 	text-align: center;
 	box-shadow: 1px 1px 5px #ffffff;
 }
+ul{
+	text-transform: lowercase;
+}
 
 img{
 	width: 90%;

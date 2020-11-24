@@ -14,5 +14,7 @@ Handlebars.registerHelper('clickHelper', function(movie) {
 });
 
 const onMovieClick = movie => {
-	
+	$("ul").append(`<li>${movie.data.Ratings[0].Source} : ${movie.data.Ratings[0].Value}</li>`)
+	$("ul").append(`<li>${movie.data.Ratings[1].Source} : ${movie.data.Ratings[1].Value}</li>`)
+	$("ul").append(`<li>${movie.data.Ratings[2].Source} : ${movie.data.Ratings[2].Value}</li>`)
 };
