@@ -10,7 +10,7 @@
 		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		
@@ -25,13 +25,15 @@
 	<script id="movie-template" type="text/x-handlebars-template">
 		
         <div class="movie-id" id=data.imdbID>
-				 <h2> {{data.Title}} </h2>
-				 <img src={{data.Poster}}>
-				 <br>
-				 <!-- <span> {{data.imdbID}} </span> -->
-				 <!-- <br>
-				 <br> -->
-				<span>{{data.Year}}</span>
+				<h2> {{data.Title}} </h2>
+				<img onclick="onMovieClick({{clickHelper this}})" src={{data.Poster}}>
+				<br>
+				<h3>{{data.Year}}</h3>
+				<!-- <ul id='r'>
+					<li id='r1'></li>
+					<li id='r2'></li>
+					<li id='r3'></li>
+				</ul> -->
 			</div>
 				
 		</script>

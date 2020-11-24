@@ -1,0 +1,38 @@
+body{
+	text-transform: uppercase;
+	background-color: #2c3e50;
+}
+
+.movie-container{
+    display: grid;
+    justify-content: center;
+	margin: 10px;
+}
+
+.movie-id{
+	background-color: rgb(7, 81, 150);
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 1px 1px 5px #ffffff;
+}
+
+img{
+	width: 90%;
+	border-radius: 20px;
+	box-shadow: 1px 1px 5px #ffffff;
+}
+
+#search{
+	display: grid;
+	grid-template: "i i i i i i i i  tb tb";
+	grid-gap: 10px;
+}
+
+#movie-input{
+	grid-area: i;
+}
+
+button{
+	grid-area: tb;
+}
+
