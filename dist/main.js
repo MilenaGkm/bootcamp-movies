@@ -13,8 +13,12 @@ Handlebars.registerHelper('clickHelper', function(movie) {
 	return JSON.stringify(movie);
 });
 
+
 const onMovieClick = movie => {
-	$("ul").append(`<li>${movie.data.Ratings[0].Source} : ${movie.data.Ratings[0].Value}</li>`)
-	$("ul").append(`<li>${movie.data.Ratings[1].Source} : ${movie.data.Ratings[1].Value}</li>`)
-	$("ul").append(`<li>${movie.data.Ratings[2].Source} : ${movie.data.Ratings[2].Value}</li>`)
-};
+	let movieID = $(`#${movie.data.imdbID}`).children('ul')
+	let movieR = movie.data.Ratings
+	
+	for(let i = 0; i < movieR.length; i++){
+		movieID.append(`<li>${movieR[i].Source} : ${movieR[i].Value}</li>`);
+	}
+}

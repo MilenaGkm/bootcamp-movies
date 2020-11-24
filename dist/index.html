@@ -24,7 +24,7 @@
 
 	<script id="movie-template" type="text/x-handlebars-template">
 		
-        <div class="movie-id" id=data.imdbID>
+        <div class="movie-id" id={{data.imdbID}}>
 				<h2> {{data.Title}} </h2>
 				<img onclick="onMovieClick({{clickHelper this}})" src={{data.Poster}}>
 				<br>
